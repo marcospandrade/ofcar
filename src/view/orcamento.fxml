@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="847.0" style="-fx-background-color: #20120f;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.orcamentoController">
+   <children>
+      <AnchorPane layoutX="23.0" layoutY="27.0" prefHeight="621.0" prefWidth="803.0" style="-fx-background-color: #9c2827;" styleClass="background" stylesheets="@../../../tela_servicos/src/application/application.css">
+         <children>
+            <JFXButton fx:id="bt_novo_orcam" buttonType="RAISED" layoutX="644.0" layoutY="541.0" onAction="#novo_orcamento" prefHeight="41.0" prefWidth="115.0" ripplerFill="#9e6161" style="-fx-background-color: #9e1414;" text="Novo Orça" textFill="WHITE" />
+            <JFXButton fx:id="bt_editar_orcam" buttonType="RAISED" layoutX="510.0" layoutY="541.0" prefHeight="41.0" prefWidth="115.0" ripplerFill="#9e6161" style="-fx-background-color: #9e1414;" text="Editar" textFill="WHITE" />
+            <JFXButton fx:id="bt_excluir_orcam" buttonType="RAISED" layoutX="379.0" layoutY="541.0" prefHeight="41.0" prefWidth="115.0" ripplerFill="#9e6161" style="-fx-background-color: #9e1414;" text="Excluir" textFill="WHITE" />
+            <JFXButton fx:id="bt_cancelar_orcam" buttonType="RAISED" layoutX="255.0" layoutY="541.0" onAction="#voltar" prefHeight="41.0" prefWidth="115.0" ripplerFill="#9e6161" style="-fx-background-color: #9e1414;" text="Cancelar" textFill="WHITE" />
+            <Label layoutX="43.0" layoutY="14.0" text="Situação" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutX="51.0" layoutY="98.0" prefHeight="10.0" prefWidth="702.0" />
+            <Separator layoutX="51.0" layoutY="33.0" orientation="VERTICAL" prefHeight="70.0" prefWidth="2.0" />
+            <RadioButton fx:id="rb_aberto_orcam" layoutX="84.0" layoutY="60.0" mnemonicParsing="false" text="Aberto" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="situacao" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rb_fechado_orcam" layoutX="172.0" layoutY="60.0" mnemonicParsing="false" text="Fechado" textFill="WHITE" toggleGroup="$situacao">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <TableView fx:id="tv_tabela_orcam" layoutX="51.0" layoutY="123.0" prefHeight="401.0" prefWidth="702.0" style="-fx-background-color: #9c2827;">
+              <columns>
+                <TableColumn fx:id="tb_situacao_orcam" prefWidth="75.0" text="Situação" />
+                <TableColumn fx:id="tc_cod_orcam" prefWidth="71.0" text="Cod. Orça" />
+                  <TableColumn fx:id="tc_nome_clien" prefWidth="143.0" text="Nome Clien." />
+                  <TableColumn fx:id="tc_placa" prefWidth="82.0" text="Placa" />
+                  <TableColumn fx:id="tc_veiculo" prefWidth="73.0" text="Veículo" />
+                  <TableColumn fx:id="tc_funcionario" prefWidth="90.0" text="Func." />
+                  <TableColumn fx:id="tc_valor_totaal" prefWidth="73.0" text="Valor Total" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <MenuBar fx:id="mb_menu_orcam" layoutX="23.0" layoutY="2.0" prefHeight="25.0" prefWidth="196.0" style="-fx-background-color: #9c2827;">
+         <menus>
+            <Menu fx:id="mb_orcamentos_orcam" mnemonicParsing="false" text="Orçamentos" />
+            <Menu fx:id="mb_apont_orcam" mnemonicParsing="false" text="Apontamentos">
+            <items>
+                <MenuItem fx:id="mi_apontamento" mnemonicParsing="false" onAction="#apontamento" text="Apontamentos" />   
+            </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+.jfx-date-picker .text-field{
+	-jfx-unfocus-color: #ae9494;
+	-fx-prompt-text-fill: #989898;
+	-fx-text-fill: #e4c2c2;
+	-jfx-focus-color: #5d0404;
+}
+.jfx-text-field {
+	-jfx-unfocus-color: #ae9494;
+	-fx-prompt-text-fill: #989898;
+	-fx-text-fill: #e4c2c2;
+	-jfx-focus-color: #5d0404;
+}
+.jfx-password-field {
+	-jfx-unfocus-color: #ae9494;
+	-fx-prompt-text-fill: #989898;
+	-fx-text-fill: #e4c2c2;
+	-jfx-focus-color: #5d0404;
+}

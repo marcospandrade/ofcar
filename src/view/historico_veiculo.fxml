@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="741.0" style="-fx-background-color: #20120f;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.historico_veiculoController">
+   <children>
+      <AnchorPane layoutX="34.0" layoutY="25.0" prefHeight="482.0" prefWidth="673.0" style="-fx-background-color: #9c2827;">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="27.0" layoutX="441.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagem/if_business_finance_money-27_2784260.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tv_hist_veiculo" layoutX="23.0" layoutY="78.0" prefHeight="315.0" prefWidth="631.0" style="-fx-background-color: #20120f;">
+              <columns>
+                <TableColumn fx:id="colu_cod_os" prefWidth="75.0" text="Cod OS" />
+                <TableColumn fx:id="colun_placa" prefWidth="79.00001525878906" text="Placa" />
+                  <TableColumn fx:id="colun_modelo_veiculo" prefWidth="82.0" text="Modelo" />
+                  <TableColumn fx:id="colun_data_entrada" prefWidth="75.0" text="Entrada" />
+                  <TableColumn fx:id="colun_cod_cliente" prefWidth="75.0" text="Cod Cliente" />
+                  <TableColumn fx:id="colun_nome_cliente" prefWidth="109.0" text="Nome Cliente" />
+                  <TableColumn fx:id="colun_data_saida" prefWidth="75.0" text="Saida" />
+                  <TableColumn fx:id="colun_valor_total" prefWidth="75.0" text="Total" />
+              </columns>
+            </TableView>
+            <JFXButton fx:id="bt_visualizar" buttonType="RAISED" layoutX="408.0" layoutY="408.0" prefHeight="41.0" prefWidth="115.0" ripplerFill="#9e6161" style="-fx-background-color: #9e1414;" text="Visualizar" textFill="WHITE" />
+            <JFXButton fx:id="bt_voltar" buttonType="RAISED" layoutX="539.0" layoutY="408.0" onAction="#voltar" prefHeight="41.0" prefWidth="115.0" ripplerFill="#9e6161" style="-fx-background-color: #9e1414;" text="Voltar" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <MenuBar focusTraversable="false" layoutX="34.0" style="-fx-background-color: #9c2827;">
+        <menus>
+          <Menu fx:id="mn_hist_veiculo" mnemonicParsing="false" text="Histórico do veiculo" />
+        </menus>
+         <effect>
+            <Blend />
+         </effect>
+      </MenuBar>
+   </children>
+</AnchorPane>

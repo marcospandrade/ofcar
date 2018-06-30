@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="746.0" prefWidth="899.0" style="-fx-background-color: #20120f;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ServicoController">
+   <children>
+      <AnchorPane layoutX="23.0" layoutY="27.0" prefHeight="685.0" prefWidth="391.0" style="-fx-background-color: #9c2827;" styleClass="background" stylesheets="@application.css">
+         <children>
+            <Label layoutX="76.0" layoutY="25.0" prefHeight="31.0" prefWidth="239.0" text="Cadastro de Serviço" textFill="WHITE">
+               <font>
+                  <Font name="CoolveticaRg-Regular" size="26.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tx_nome_servico" focusColor="#d03c3c" layoutX="110.0" layoutY="156.0" prefHeight="25.0" prefWidth="171.0" promptText="Nome" unFocusColor="BLACK">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="tx_valor_servico" focusColor="#d03c3c" layoutX="110.0" layoutY="228.0" onKeyReleased="#tfValor" prefHeight="25.0" prefWidth="171.0" promptText="Valor" unFocusColor="BLACK">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextArea fx:id="ta_descicao_servico" focusColor="#d03c3c" layoutX="110.0" layoutY="309.0" prefHeight="186.0" prefWidth="171.0" styleClass="jfx-text-area" stylesheets="@application.css" promptText="Descrição do Serviço:" unFocusColor="BLACK">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextArea>
+            <JFXButton fx:id="bt_cancelar" buttonType="RAISED" layoutX="54.0" layoutY="537.0" onAction="#voltar" prefHeight="41.0" prefWidth="115.0" ripplerFill="#9e6161" style="-fx-background-color: #9e1414;" text="Cancelar" textFill="WHITE" />
+            <JFXButton fx:id="bt_cadastrar_servico" buttonType="RAISED" layoutX="213.0" layoutY="537.0" onAction="#cadastrarServico" prefHeight="41.0" prefWidth="115.0" ripplerFill="#9e6161" style="-fx-background-color: #9e1414;" text="Salvar" textFill="WHITE" />
+            <JFXButton fx:id="bt_editar_servico" buttonType="RAISED" layoutX="54.0" layoutY="613.0" onAction="#atualizarServico" prefHeight="41.0" prefWidth="115.0" ripplerFill="#9e6161" style="-fx-background-color: #9e1414;" text="Editar" textFill="WHITE" />
+            <JFXButton fx:id="bt_excluir_servico" buttonType="RAISED" layoutX="213.0" layoutY="613.0" onAction="#excluirServico" prefHeight="41.0" prefWidth="115.0" ripplerFill="#9e6161" style="-fx-background-color: #9e1414;" text="Excluir" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tv_servico" onMouseClicked="#eventoTabela" onTouchMoved="#eventoTabela" onTouchPressed="#eventoTabela" onTouchReleased="#eventoTabela" onTouchStationary="#eventoTabela" depthTest="ENABLE" layoutX="434.0" layoutY="27.0" prefHeight="685.0" prefWidth="445.0" style="-fx-background-color: #9c2827;">
+        <columns>
+          <TableColumn fx:id="tc_nome_servico" prefWidth="75.0" text="Nome" />
+          <TableColumn fx:id="tc_descricao_servico" prefWidth="304.0" text="Descrição" />
+            <TableColumn fx:id="tc_valor_servico" minWidth="0.0" prefWidth="65.0" text="Valor" />
+        </columns>
+      </TableView>
+      <Separator layoutX="421.0" layoutY="27.0" orientation="VERTICAL" prefHeight="685.0" prefWidth="3.0" />
+   </children>
+</AnchorPane>
