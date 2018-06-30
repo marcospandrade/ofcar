@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FuncionarioController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <TabPane prefHeight="404.0" prefWidth="640.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Funcionário">
+                     <content>
+                        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefWidth="423.0">
+                           <children>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="404.0" prefWidth="639.0">
+                                 <children>
+                                    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="311.0" prefWidth="551.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Text id="lbNome" disable="true" focusTraversable="true" layoutX="35.0" layoutY="41.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" wrappingWidth="81.13671875">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                          <Text id="lbTel" layoutX="340.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                          <Text id="lbCpf" layoutX="35.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cpf" wrappingWidth="33.240234375">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                          <Text id="lbDataNasc" layoutX="234.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de nascimento">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Text>
+                                          <Button id="btnConfirmar" fx:id="btnConfirmarFuncionario" layoutX="242.0" layoutY="310.0" mnemonicParsing="false" onAction="#cadastrarFuncionario" prefHeight="40.0" prefWidth="106.0" text="Confirmar">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Button>
+                                          <Separator layoutX="-3.0" layoutY="102.0" prefHeight="3.0" prefWidth="640.0" />
+                                          <Separator layoutX="-4.0" layoutY="196.0" prefHeight="3.0" prefWidth="640.0" />
+                                          <Separator layoutX="313.0" layoutY="103.0" orientation="VERTICAL" prefHeight="93.0" prefWidth="0.0" />
+                                          <Separator layoutX="-4.0" layoutY="290.0" prefHeight="3.0" prefWidth="640.0" />
+                                          <TextField fx:id="txNome" layoutX="35.0" layoutY="52.0" prefHeight="37.0" prefWidth="508.0" />
+                                          <TextField fx:id="txCpf" layoutX="35.0" layoutY="140.0" prefHeight="37.0" prefWidth="252.0" />
+                                          <TextField fx:id="txTel" layoutX="340.0" layoutY="140.0" prefHeight="37.0" prefWidth="252.0" />
+                                          <TextField fx:id="txDataNasc" layoutX="234.0" layoutY="239.0" prefHeight="37.0" prefWidth="158.0" />
+                                          <Label layoutX="14.0" layoutY="-1.0" text="Tela de Cadastro de Funcionários:" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                </Tab>
+                <Tab text="Veículo">
+                     <content>
+                        <AnchorPane maxHeight="-1.0" maxWidth="-1.0">
+                           <children>
+                              <Text disable="true" focusTraversable="true" layoutX="38.0" layoutY="74.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Modelo" wrappingWidth="81.13671875">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="226.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Placa">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="38.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quilometragem" wrappingWidth="138.240234375">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="414.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marca">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <Button fx:id="btnConfirmarVeiculo" layoutX="244.0" layoutY="297.0" mnemonicParsing="false" onAction="#cadastrarVeiculo" prefHeight="40.0" prefWidth="106.0" text="Confirmar">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Separator layoutY="155.0" prefHeight="3.0" prefWidth="640.0" />
+                              <Separator layoutX="-1.0" layoutY="249.0" prefHeight="3.0" prefWidth="640.0" />
+                              <Separator layoutX="210.0" layoutY="157.0" orientation="VERTICAL" prefHeight="93.0" prefWidth="0.0" />
+                              <Separator layoutX="210.0" layoutY="42.0" orientation="VERTICAL" prefHeight="116.0" prefWidth="6.0" />
+                              <Text layoutX="226.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ano de fabricação" wrappingWidth="151.31250730156898">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <Separator layoutX="401.0" layoutY="42.0" orientation="VERTICAL" prefHeight="116.0" prefWidth="6.0" />
+                              <Separator layoutX="401.0" layoutY="158.0" orientation="VERTICAL" prefHeight="93.0" prefWidth="6.0" />
+                              <Text layoutX="414.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cor" wrappingWidth="151.31250730156898">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Text>
+                              <Label layoutX="24.0" layoutY="9.0" text="Tela de Cadastro de Veículos:" />
+                              <TextField fx:id="txModelo" layoutX="34.0" layoutY="83.0" prefHeight="34.0" prefWidth="170.0" />
+                              <TextField fx:id="txPlaca_Carro" layoutX="224.0" layoutY="83.0" prefHeight="34.0" prefWidth="170.0" />
+                              <TextField fx:id="txMarca" layoutX="412.0" layoutY="83.0" prefHeight="34.0" prefWidth="170.0" />
+                              <TextField fx:id="txKm" layoutX="34.0" layoutY="193.0" prefHeight="34.0" prefWidth="170.0" />
+                              <TextField fx:id="txAno" layoutX="224.0" layoutY="193.0" prefHeight="34.0" prefWidth="170.0" />
+                              <TextField fx:id="txCor" layoutX="412.0" layoutY="193.0" prefHeight="34.0" prefWidth="170.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                </Tab>
+                  <Tab text="Serviço">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Text layoutX="39.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manutenção efetuada por:" wrappingWidth="209.13671875">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="txNomeFuncServ" layoutX="39.0" layoutY="58.0" prefHeight="25.0" prefWidth="244.0" promptText="Nome funcionario" />
+                              <Text layoutX="48.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descrição de manutenção:" wrappingWidth="194.13671875">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Separator layoutY="92.0" prefHeight="4.0" prefWidth="640.0" />
+                              <Separator layoutX="287.0" layoutY="-8.0" orientation="VERTICAL" prefHeight="101.0" prefWidth="38.0" />
+                              <TextField fx:id="txDescricaoServico" alignment="TOP_LEFT" layoutX="50.0" layoutY="138.0" prefHeight="156.0" prefWidth="541.0" promptText="Descrição.." />
+                              <Label layoutX="23.0" layoutY="6.0" text="Tela de Cadastro de Serviço:" />
+                              <Button fx:id="btnConfirmarServico" layoutX="259.0" layoutY="320.0" mnemonicParsing="false" onAction="#cadastrarServico" prefHeight="40.0" prefWidth="106.0" text="Confirmar">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Text layoutX="322.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Serviço:" wrappingWidth="209.13671875">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="txNomeServico" layoutX="321.0" layoutY="58.0" prefHeight="25.0" prefWidth="244.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Laudo de Entrada">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Text layoutX="39.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cliente:" wrappingWidth="209.13671875">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="38.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reclamações:" wrappingWidth="194.13671875">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="txLaudoCliente" layoutX="39.0" layoutY="55.0" prefHeight="25.0" prefWidth="244.0" />
+                              <Separator layoutY="92.0" prefHeight="4.0" prefWidth="640.0" />
+                              <Separator layoutX="287.0" layoutY="-8.0" orientation="VERTICAL" prefHeight="101.0" prefWidth="38.0" />
+                              <TextField fx:id="txLaudoReclamacao" alignment="TOP_LEFT" layoutX="40.0" layoutY="206.0" prefHeight="100.0" prefWidth="541.0" promptText="Reclamações..." />
+                              <Label layoutX="23.0" layoutY="6.0" text="Laudo de Entrada de Veículos:" />
+                              <Button fx:id="btnConfirmarLaudo" layoutX="259.0" layoutY="320.0" mnemonicParsing="false" onAction="#cadastrarLaudo" prefHeight="40.0" prefWidth="106.0" text="Confirmar">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Text layoutX="322.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Entrada:" wrappingWidth="209.13671875">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="txLaudoData" layoutX="320.0" layoutY="55.0" prefHeight="25.0" prefWidth="244.0" />
+                              <Separator layoutX="2.0" layoutY="163.0" prefHeight="4.0" prefWidth="640.0" />
+                              <TextField fx:id="txLaudoPlaca" layoutX="39.0" layoutY="128.0" prefHeight="25.0" prefWidth="244.0" />
+                              <Text layoutX="40.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Placa:" wrappingWidth="209.13671875">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Cliente">
+                     <content>
+                        <AnchorPane layoutX="-1.0" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Text layoutX="39.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" wrappingWidth="209.13671875">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="43.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" wrappingWidth="194.13671875">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="tx_nome" layoutX="39.0" layoutY="55.0" prefHeight="25.0" prefWidth="244.0" />
+                              <Separator layoutX="2.0" layoutY="119.0" prefHeight="4.0" prefWidth="640.0" />
+                              <Separator layoutX="283.0" layoutY="-5.0" orientation="VERTICAL" prefHeight="125.0" prefWidth="38.0" />
+                              <TextField fx:id="tx_email" alignment="TOP_LEFT" layoutX="45.0" layoutY="265.0" prefHeight="25.0" prefWidth="553.0" />
+                              <Label layoutX="23.0" layoutY="6.0" text="Cadastro de Cliente" />
+                              <Button fx:id="btnConfirmarLaudo1" layoutX="259.0" layoutY="320.0" mnemonicParsing="false" onAction="#cadastrarCliente" prefHeight="40.0" prefWidth="106.0" text="Confirmar">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Button>
+                              <Text layoutX="322.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF:" wrappingWidth="209.13671875">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="tx_cpf" layoutX="312.0" layoutY="55.0" prefHeight="25.0" prefWidth="249.0" />
+                              <Separator layoutX="2.0" layoutY="232.0" prefHeight="4.0" prefWidth="640.0" />
+                              <TextField fx:id="tx_tel" layoutX="35.0" layoutY="175.0" prefHeight="25.0" prefWidth="244.0" />
+                              <Text layoutX="35.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:" wrappingWidth="209.13671875">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="322.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento" wrappingWidth="209.13671875">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="tx_data" layoutX="312.0" layoutY="175.0" prefHeight="25.0" prefWidth="244.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

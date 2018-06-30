@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="777.0" prefWidth="1143.0" style="-fx-background-color: #20120f;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.tela_principalController">
+   <children>
+      <AnchorPane layoutX="31.0" layoutY="60.0" prefHeight="703.0" prefWidth="1072.0" style="-fx-background-color: #9c2827;">
+         <children>
+            <JFXButton fx:id="bt_ordem_servi_trla_principal" buttonType="RAISED" contentDisplay="TOP" layoutY="29.0" onAction="#emicao" prefHeight="96.0" prefWidth="169.0" ripplerFill="#bf5656" style="-fx-background-color: #9e1414;" text="Ordem de Serviço" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="bt_laudo_entrada_tela_principal1" buttonType="RAISED" contentDisplay="TOP" layoutY="136.0" onAction="#laudo" prefHeight="96.0" prefWidth="169.0" ripplerFill="#bf5656" style="-fx-background-color: #9e1414;" text="Laudo de Entrada" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="bt_orcamentos_tela_princi" buttonType="RAISED" contentDisplay="TOP" layoutY="241.0" onAction="#orcamento" prefHeight="96.0" prefWidth="169.0" ripplerFill="#bf5656" style="-fx-background-color: #9e1414;" text="Orçamentos" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="bt_estoque_tela_princi" buttonType="RAISED" contentDisplay="TOP" layoutY="344.0" onAction="#telaEstoque" prefHeight="96.0" prefWidth="169.0" ripplerFill="#bf5656" style="-fx-background-color: #9e1414;" text="Estoque" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="bt_entrada_produtos_tela_princi" buttonType="RAISED" contentDisplay="TOP" layoutY="448.0" prefHeight="96.0" prefWidth="169.0" ripplerFill="#bf5656" style="-fx-background-color: #9e1414;" text="Entrada de Produtos" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="bt_veiculo_tela_princi" buttonType="RAISED" contentDisplay="TOP" layoutX="913.0" layoutY="29.0" onAction="#veiculo" prefHeight="96.0" prefWidth="169.0" ripplerFill="#bf5656" style="-fx-background-color: #9e1414;" text="Veiculos" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="bt_cliente_tela_princi" buttonType="RAISED" contentDisplay="TOP" layoutX="913.0" layoutY="136.0" onAction="#cliente" prefHeight="96.0" prefWidth="169.0" ripplerFill="#bf5656" style="-fx-background-color: #9e1414;" text="Clientes" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="471.0" AnchorPane.topAnchor="136.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="bt_produtos_tela_princi" buttonType="RAISED" contentDisplay="TOP" layoutX="913.0" layoutY="241.0" onAction="#peca" prefHeight="96.0" prefWidth="169.0" ripplerFill="#bf5656" style="-fx-background-color: #9e1414;" text="Produtos" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="bt_servicos_tela_princi" buttonType="RAISED" contentDisplay="TOP" layoutX="913.0" layoutY="344.0" onAction="#servico" prefHeight="96.0" prefWidth="169.0" ripplerFill="#bf5656" style="-fx-background-color: #9e1414;" text="Serviços" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="bt_funcionarios_tela_princi" buttonType="RAISED" contentDisplay="TOP" layoutX="913.0" layoutY="448.0" onAction="#funcionario" prefHeight="96.0" prefWidth="169.0" ripplerFill="#bf5656" style="-fx-background-color: #9e1414;" text="Funcionarios" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="bt_fornecedor_tela_princi" buttonType="RAISED" contentDisplay="TOP" layoutX="913.0" layoutY="555.0" onAction="#fornecedor" prefHeight="96.0" prefWidth="169.0" ripplerFill="#bf5656" style="-fx-background-color: #9e1414;" text="Fornecedor" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="96.0" fitWidth="111.0" layoutY="593.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagem/Logo%20OfCar.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="96.0" layoutY="660.0" text="Gestao de carros e cia" textFill="WHITE">
+               <font>
+                  <Font name="Dubai Bold" size="16.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tv_os" layoutX="179.0" layoutY="25.0" prefHeight="519.0" prefWidth="724.0" style="-fx-background-color: #bf5656;">
+              <columns>
+                <TableColumn fx:id="cl_codigo_os_tela_princi" prefWidth="65.0" text="Codigo OS" />
+                <TableColumn fx:id="cl_func_tela_princi" prefWidth="93.99996948242188" text="Funcionario" />
+                  <TableColumn fx:id="cl_nome_client_tela_principal" prefWidth="148.0" text="Nome Cliente" />
+                  <TableColumn fx:id="cl_placa_tela_princi" prefWidth="132.0" text="Placa" />
+                  <TableColumn fx:id="cl_veiculo_tela_princi" prefWidth="156.0" text="Veiculo" />
+                  <TableColumn fx:id="cl_total_tela_princi" prefWidth="128.0" text="Total" />
+              </columns>
+            </TableView>
+            <RadioButton layoutX="245.0" layoutY="556.0" mnemonicParsing="false" text="Em Aberto" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="situacao" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="352.0" layoutY="556.0" mnemonicParsing="false" text="Fechadas" textFill="WHITE" toggleGroup="$situacao">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton layoutX="454.0" layoutY="556.0" mnemonicParsing="false" text="Todas" textFill="WHITE" toggleGroup="$situacao">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <Label layoutX="179.0" layoutY="554.0" text="Situação:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="img_sair_tela_princi" fitHeight="53.0" fitWidth="60.0" layoutX="1060.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagem/logout-512%20(1).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

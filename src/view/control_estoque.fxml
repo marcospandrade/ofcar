@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="850.0" style="-fx-background-color: #20120f;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControlEstoqueController">
+   <children>
+      <AnchorPane layoutX="32.0" layoutY="25.0" prefHeight="521.0" prefWidth="781.0" style="-fx-background-color: #9c2827;" stylesheets="@../util/style.css">
+         <children>
+            <Label layoutX="32.0" layoutY="21.0" prefHeight="24.0" prefWidth="84.0" text="Fornecedor:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXDatePicker fx:id="dt_data_estoque" defaultColor="#d03c3c" layoutX="116.0" layoutY="72.0" />
+            <Label layoutX="74.0" layoutY="75.0" text="DATA:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="432.0" layoutY="77.0" text="Codigo Da Nota:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="tx_cod_nota" focusColor="#d03c3c" layoutX="548.0" layoutY="75.0" prefHeight="25.0" prefWidth="171.0" unFocusColor="BLACK" />
+            <TableView fx:id="tv_entrada_produto" layoutX="47.0" layoutY="120.0" prefHeight="321.0" prefWidth="688.0" style="-fx-background-color: #20120f;">
+               <columns>
+                  <TableColumn fx:id="coluna_id_produto" prefWidth="36.0" text="ID " />
+                  <TableColumn fx:id="coluna_nome" prefWidth="207.0" text="Nome Produto" />
+                  <TableColumn fx:id="coluna_fornecedor" prefWidth="187.0" text="Fornecedor" />
+                  <TableColumn fx:id="coluna_quantidade_produto" minWidth="0.0" prefWidth="81.0" text="Quantidade" />
+                  <TableColumn fx:id="coluna_valor_uni" prefWidth="89.0" text="Valor Unitário" />
+                  <TableColumn fx:id="coluna_valor_total" prefWidth="87.0" text="Valor Total" />
+               </columns>
+            </TableView>
+            <Label layoutX="559.0" layoutY="479.0" text="Valor Total:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="bt_cancelar" buttonType="RAISED" layoutX="299.0" layoutY="473.0" onAction="#voltar" prefHeight="28.0" prefWidth="115.0" ripplerFill="#9e6161" style="-fx-background-color: #9e1414;" text="Cancelar" textFill="WHITE" />
+            <JFXButton fx:id="bt_confirmar" buttonType="RAISED" layoutX="430.0" layoutY="475.0" prefHeight="28.0" prefWidth="115.0" ripplerFill="#9e6161" style="-fx-background-color: #9e1414;" text="Confirmar" textFill="WHITE" />
+            <TextField fx:id="tx_valor_total" layoutX="651.0" layoutY="477.0" prefHeight="25.0" prefWidth="84.0" />
+            <JFXButton fx:id="bt_pesquisar_fornecedor" buttonType="RAISED" layoutX="332.0" layoutY="20.0" prefHeight="28.0" prefWidth="201.0" ripplerFill="#9e6161" style="-fx-background-color: #9e1414;" text="Pesquisar por Fornecedor" textFill="WHITE" />
+            <JFXComboBox fx:id="cb_fornecedor" layoutX="116.0" layoutY="21.0" prefHeight="25.0" prefWidth="171.0" />
+            <JFXButton fx:id="bt_cadastro_fornecedor" buttonType="RAISED" layoutX="559.0" layoutY="20.0" onAction="#telaFornecedor" prefHeight="28.0" prefWidth="201.0" ripplerFill="#9e6161" style="-fx-background-color: #9e1414;" text="Adicionar Fornecedor" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
